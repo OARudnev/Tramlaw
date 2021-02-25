@@ -1,0 +1,74 @@
+{{> header-profile }}
+
+{{> side-menu }}
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+  <div class="justify-content-center align-items-center pt-2 pb-1 mb-2 border-bottom">
+    <h2>{{title}}</h2>
+  </div>
+
+<div class="container">
+
+  <form method="POST" action="/updateCredentials" id="FormCredentials">
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <label for="username">User name</label>
+        <input type="text" name ="username" class="form-control" placeholder="Username" id="username" disabled>
+      </div>
+      <div class="col-sm-6">
+        <label for="email">Email</label>
+        <input type="text" name ="email" class="form-control" placeholder="cutomer@customer.com" id="email" disabled>
+      </div>
+      <div class="col-sm-6 mt-2">
+        <label for="firstName">Given name</label>
+        <input type="text" name ="firstName" class="form-control" placeholder="Given name" id="firstName" disabled>
+      </div>
+      <div class="col-sm-6 mt-2">
+        <label for="lastName">Family name</label>
+        <input type="text" name ="lastName" class="form-control" placeholder="Family name" id="lastName" disabled>
+      </div>
+        <div class="col-sm-6 mt-2">
+        <label for="phone">Phone</label>
+        <input type="text" name ="phone" class="form-control" placeholder="(04) 1234 5678" id="phone" disabled>
+      </div>
+      <div class="col-12 mt-2 mb-3">
+        <label for="address">Address</label>
+        <input type="text" name ="address" class="form-control" placeholder="Address" id="address" disabled>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" id="b1">Edit</button>
+  </form>
+  <form method="POST" action="/changePassword">
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="password">New password</label>
+        <input type="password" name ="password" class="form-control" placeholder="New password" id="password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="passwordMatch">Re-enter new password</label>
+        <input type="password" name ="passwordMatch" class="form-control" placeholder="Re-enter new password" id="passwordMatch">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" id="b2">Change password</button>
+  </form>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020–2021 Tramlaw</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+  </footer>
+</main>
+
+<div class="modal fade mb-3" id="modalWindow" tabindex="-1" aria-labelledby="modalWindowLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+{{> footer-end }}

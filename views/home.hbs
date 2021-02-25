@@ -1,0 +1,220 @@
+{{> header }}
+
+    <main class="container">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Our services</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna neque viverra justo nec ultrices dui. Sit amet risus nullam eget felis eget nunc lobortis mattis. Mi proin sed libero enim sed faucibus turpis in. Porta non pulvinar neque laoreet.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        {{#each services}}
+        <div class="col">
+          <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 fw-normal">{{this.service_name}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">from ${{this.price}}<small class="text-muted">/ {{this.uom}}</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+            {{#each this.serviceInServices}}
+              <li>{{this}}</li>
+            {{/each}}
+            </ul>
+            <a class="btn btn-lg btn-block btn-primary" href="/addToCart/{{this.id}}" role="button">Add to cart</a>
+          </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+   
+    <div class="container marketing">
+    <hr class="featurette-divider mb-5">
+
+    <h1>Sed tempus urna et pharetra pharetra massa.</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Amet porttitor eget dolor morbi non arcu risus. Velit aliquet sagittis id consectetur purus ut faucibus.</p>
+    
+    <div class="row featurette">
+      <div class="col-md-7 mt-5 mb-5">
+        <h2 class="featurette-heading">Ac tortor. <span class="text-muted">Quis imperdiet massa tincidunt nunc.</span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="lead">A arcu cursus vitae congue mauris rhoncus:</p>
+        <ul>
+          <li>Placerat duis ultricies lacus.</li>
+          <li>Ut morbi tincidunt augue.</li>
+          <li>In eu mi.</li>
+        </ul>
+        <p class="lead">Senectus et netus et malesuada fames ac turpis. Consequat ac felis donec et odio pellentesque. Amet consectetur adipiscing elit ut aliquam purus sit. Eu lobortis elementum nibh tellus molestie. Amet porttitor eget dolor morbi. Cras sed felis eget velit. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Lacus viverra vitae congue eu consequat ac felis. Urna molestie at elementum eu facilisis sed odio morbi. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Quam lacus suspendisse faucibus interdum posuere lorem. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a.</p>
+      </div>
+      <div class="col-md-5 mt-5 mb-5">
+        <img src="img/anthony-garand-c-dn31tcjsM-unsplash.jpg" class="img-fluid"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 mt-5 mb-5">
+        <h2 class="featurette-heading">Viverra accumsan. <span class="text-muted">Magnis dis parturient!</span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate enim nulla aliquet porttitor lacus luctus accumsan. Blandit turpis cursus in hac.</p>
+        <p class="lead">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Facilisis sed odio morbi quis commodo odio aenean sed. Sed viverra ipsum nunc aliquet bibendum. Id venenatis a condimentum vitae. Elementum nisi quis eleifend quam adipiscing vitae. Urna et pharetra pharetra massa massa ultricies mi. Lacus vel facilisis volutpat est. Nisl suscipit adipiscing bibendum est ultricies. Morbi non arcu risus quis varius quam quisque. Mi bibendum neque egestas congue. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Velit dignissim sodales ut eu sem integer. Nisi scelerisque eu ultrices vitae auctor eu augue ut.</p>
+      </div>
+      <div class="col-md-5 order-md-1 mt-5 mb-5">
+        <img src="img/brett-jordan-DbfAMPWyzUw-unsplash.jpg" class="img-fluid"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 mt-5 mb-5">
+        <h2 class="featurette-heading">Nisl vel. <span class="text-muted">Neque egestas.</span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc sed velit dignissim sodales. Pretium fusce id velit ut tortor pretium viverra suspendisse. Integer malesuada nunc vel risus commodo viverra maecenas.</p>
+        <p class="lead">Sem viverra aliquet eget sit amet tellu:</p>
+        <ul>
+          <li>Lobortis feugiat vivamus at augue?</li>
+          <li>Ut lectus arcu bibendum at varius vel pharetra vel?</li>
+          <li>Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?</li>
+          <li>Maecenas sed enim ut sem viverra aliquet eget?</li>
+          <li>Adipiscing elit pellentesque habitant morbi tristique senectus et netus et?</li>
+        </ul>
+      </div>
+      <div class="col-md-5 mt-5 mb-5">
+        <img src="img/compare-fibre-2H06IWVVpiQ-unsplash.jpg" class="img-fluid"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 mt-5 mb-5">
+        <h2 class="featurette-heading">Blandit cursus risus. <span class="text-muted">Quis enim!</span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur. Ipsum dolor sit amet consectetur adipiscing. Nascetur ridiculus mus mauris vitae. Sapien eget mi proin sed libero. Enim blandit volutpat maecenas volutpat. Nibh venenatis cras sed felis eget velit aliquet sagittis.</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In ante metus dictum at tempor commodo. In ante metus dictum at tempor commodo ullamcorper a. Gravida in fermentum et sollicitudin ac orci phasellus.</p>
+      </div>
+      <div class="col-md-5 order-md-1 mt-5 mb-5">
+        <img src="img/sofa-communications-FAmLDw92Ul0-unsplas.jpg" class="img-fluid"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider mb-5">
+
+  </div>
+
+    <div id="Reviews" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#Reviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#Reviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#Reviews" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="review">
+            <h5 class="review__header">Sagittis id. Morbi enim!</h5>
+              <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Velit dignissim sodales ut eu. Ante metus dictum at tempor commodo. Mattis pellentesque id nibh tortor.</blockquote>
+              <address class="review__author">
+                <img src="img/mariya_eduardovna.jpg" alt="" class="review__photo" />
+                <h6 class="review__name">Olivia Williams</h6>
+                <p class="review__location">Ultimo, NSW</p>
+              </address>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="review">
+            <h5 class="review__header">Ipsum consequat nisl. Augue mauris.</h5>
+              <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Pharetra et ultrices neque ornare aenean. Sed cras ornare arcu dui vivamus arcu felis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere.</blockquote>
+              <address class="review__author">
+                <img src="img/maksim_vyacheslavovich.jpg" alt="" class="review__photo" />
+                <h6 class="review__name">Noah Brown</h6>
+                <p class="review__location">Hawthorn, VIC</p>
+              </address>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="review">
+            <h5 class="review__header">Eleifend mi in</h5>
+              <blockquote class="review__text">
+                  Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                  ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                  laborum. Incidunt numquam perferendis veritatis neque repellendus.
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </blockquote>
+              <address class="review__author">
+                <img src="img/dave-goudreau-0uH7NLMaMtQ-unsplash.jpg" alt="" class="review__photo" />
+                <h6 class="review__name">William Jones</h6>
+                <p class="review__location">Bundoora, VIC</p>
+              </address>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#Reviews"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Reviews"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">&copy; 2020–2021 Tramlaw</small>
+          </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Cool stuff</a></li>
+          <li><a class="link-secondary" href="#">Random feature</a></li>
+          <li><a class="link-secondary" href="#">Team feature</a></li>
+          <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+          <li><a class="link-secondary" href="#">Another one</a></li>
+          <li><a class="link-secondary" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Resource</a></li>
+          <li><a class="link-secondary" href="#">Resource name</a></li>
+          <li><a class="link-secondary" href="#">Another resource</a></li>
+          <li><a class="link-secondary" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Team</a></li>
+          <li><a class="link-secondary" href="#">Locations</a></li>
+          <li><a class="link-secondary" href="#">Privacy</a></li>
+          <li><a class="link-secondary" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+ <div class="modal">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    
+{{> footer-end }}

@@ -1,0 +1,46 @@
+{{> header-profile }}
+
+{{> side-menu }}
+
+<div class="container">
+
+<h1>{{title}}</h1>
+
+{{#if errors}}
+  {{#each errors}}
+    <div class="alert alert-danger">
+      {{this.msg}}
+    </div>
+  {{/each}}
+{{/if}}
+
+<form>
+  <div class="input-group mb-2">
+    <input type="text" name ="order" class="form-control" placeholder="Order">
+    <class="dropdown1" id="dl1">
+      <select name="statuses" id="statuses">
+        <option value="New">New</option>
+        <option value="Accepted">Accepted</option>
+        <option value="Completed">Completed</option>
+      </select>
+  </div>
+  
+  <button type="submit" class="btn btn-primary mb-3" id="b1">Set</button>
+   </form>
+
+  <div class="modal fade" id="modalWindow" tabindex="-1" aria-labelledby="modalWindowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+   <table class="table table-hover">
+    </table>
+</div>
+  </div>
+  
+
+
+
+{{> footer-end }}
