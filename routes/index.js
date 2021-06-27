@@ -19,6 +19,9 @@ const nodemailer = require('nodemailer');
         }
     });
 
+// HTML encoding of user input: 
+const encodeHTML = str => str.replace(/[\u00A0-\u9999<>\&]/gim, (i) => `&#${i.charCodeAt(0)};`);
+
 /* GET home page. */
 router.get('/', async function(req, res) {
 
@@ -127,8 +130,8 @@ router.post('/register', async function(req, res, next) {
       errors: errors
     });
   } else {
-      const username = req.body.username;
-      const email = req.body.email;
+      const username = encodeHTML(req.body.username);
+      const email = encodeHTML(req.body.email);
       const password = req.body.password;
       const db = require('../db.js');
 
@@ -237,11 +240,11 @@ router.post('/cart', async function(req, res, next) {
 
       const makeOrder = async (saveInfo) => {
         try {
-          const firstName = req.body.firstName;
-          const lastName = req.body.lastName;
-          const address = req.body.address;
-          const phone = req.body.phone;
-          const orderDescription = req.body.orderDescription;
+          const firstName = encodeHTML(req.body.firstName);
+          const lastName = encodeHTML(req.body.lastName);
+          const address = encodeHTML(req.body.address);
+          const phone = encodeHTML(req.body.phone);
+          const orderDescription = req.body.orderDescription.replace(/textarea/ig,'text area');
           const userID = req.user.user_id;
           const cart = new Cart(req.session.cart);
           const db = require('../db.js');
@@ -584,7 +587,7 @@ router.post('/updateCredentials', async function(req, res, next) {
 
     } else {
       try {
-      const result = await updateCredentials(req.user.user_id, req.body.email, req.body.firstName, req.body.lastName , req.body.address , req.body.phone);
+      const result = await updateCredentials(req.user.user_id, encodeHTML(req.body.email), encodeHTML(req.body.firstName), encodeHTML(req.body.lastName), req.body.address.replace(/textarea/ig,'text area'), encodeHTML(req.body.phone));
       res.json(result);
       } catch (error) {
         res.json(error);
