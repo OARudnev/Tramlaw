@@ -270,7 +270,7 @@ router.post('/cart', async function(req, res, next) {
             subject: `Order ${order_id} has been placed`, // Subject line
       
             html: `
-            <p>Dear ${customerInfo.firstName !== 'NULL' ? `, ${customerInfo.firstName},` : `customer,`}</p>
+            <p>Dear ${customerInfo.firstName !== 'NULL' ? ` ${customerInfo.firstName},` : `customer,`}</p>
             <p>We received your order consisting of the following items:</p>
             <table>
                 <thead>
@@ -285,8 +285,8 @@ router.post('/cart', async function(req, res, next) {
                 ${cart.generateArray().map((service, i) => {              
                   return `
                   <tr>
-                    <th scope="row">${i + 1}</th>
-                    <td>${service.item.service_name}</th>
+                    <td scope="row">${i + 1}</td>
+                    <td>${service.item.service_name}</td>
                     <td>${service.qty}</td>
                     <td>$${service.price}</td>
                   </tr>`

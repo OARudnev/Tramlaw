@@ -3,7 +3,7 @@ import View from './View.js';
 
 class ordersListView extends View {
   _parentElement = document.querySelector('table');
-  _errorMessage = `Вы ещё ничего у нас не заказали :(`;
+  _errorMessage = `You haven't placed any orders yet :(`;
   _message = '';
 
   addHandlerRender(handler) {
